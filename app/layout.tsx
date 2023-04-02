@@ -1,5 +1,6 @@
 import Link from "next/link";
 import "./globals.css";
+import Navigation from "@/components/Navigation";
 
 export const metadata = {
   title: "Doug's tech blog",
@@ -11,20 +12,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const header = (
-    <header>
-      <div>
-        <Link href="/">
-          <h1 className="text-3xl font-bold underline">Doug Irrazabal</h1>
-        </Link>
-      </div>
-    </header>
-  );
-
   return (
     <html lang="es">
       <body>
-        {header}
+        <Navigation />
         {children}
       </body>
     </html>
