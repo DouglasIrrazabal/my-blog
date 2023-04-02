@@ -1,13 +1,21 @@
-import PostPreview from "@/components/PostPreview";
-import getPostMetadata from "@/components/getPostMetadata";
+import Link from "next/link";
+import { PostMetadata } from "@/models/PostMetadata";
+import getPostsMetadata from "@/services/getPostsMetadata";
 
 const BlogPage = () => {
-  const postMetadata = getPostMetadata();
-  const postPreviews = postMetadata.map((post) => (
-    <PostPreview key={post.slug} {...post} />
-  ));
+  const postMetadata = getPostsMetadata();
 
-  return <>{postPreviews}</>;
+  return postMetadata.map(
+    ({ title, subtitle, publishedAt, slug }: PostMetadata) => (
+      <>
+        <Link href={`blog/${slug}`}>
+          <h2>{title}</h2>
+        </Link>
+        <p>{subtitle}</p>
+        <p>{publishedAt}</p>
+      </>
+    )
+  );
 };
 
 export default BlogPage;
