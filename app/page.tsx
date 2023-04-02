@@ -1,14 +1,9 @@
-import PostPreview from "@/components/PostPreview";
-import getPostMetadata from "@/components/getPostMetadata";
-import Link from "next/link";
-
 const HomePage = () => {
-  const postMetadata = getPostMetadata();
-  const postPreviews = postMetadata.map((post) => (
-    <PostPreview key={post.slug} {...post} />
-  ));
-
-  return <>{postPreviews}</>;
+  return (
+    <>
+      <h1>Hola</h1>
+    </>
+  );
 };
 
 export default HomePage;

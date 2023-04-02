@@ -4,7 +4,7 @@ import { PostMetadata } from "./PostMetadata";
 const PostPreview = ({ title, subtitle, date, slug }: PostMetadata) => {
   return (
     <>
-      <Link href={`/posts/${slug}/`}>
+      <Link href={slug}>
         <h2>{title}</h2>
       </Link>
       <p>{subtitle}</p>
