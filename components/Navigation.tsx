@@ -11,16 +11,16 @@ const navItems = {
 
 const Navigation = () => {
   return (
-    <nav>
-      <div>
-        {Object.entries(navItems).map(([path, { name }]) => {
-          return (
-            <Link key={path} href={path}>
-              <span>{name}</span>
-            </Link>
-          );
-        })}
-      </div>
+    <nav className="flex flex-row place-content-start sm:flex-col sm:pr-10 sm:mt-4">
+      {Object.entries(navItems).map(([path, { name }]) => {
+        return (
+          <Link key={path} href={path}>
+            <span className="py-[5px] px-[10px] bg-neutral-900 rounded">
+              {name}
+            </span>
+          </Link>
+        );
+      })}
     </nav>
   );
 };

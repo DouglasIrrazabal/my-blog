@@ -1,4 +1,3 @@
-import Link from "next/link";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 
@@ -13,10 +12,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es">
-      <body>
+    <html lang="es" className="bg-neutral-950 font-montserrat text-white">
+      <body className="flex flex-col mt-4 mx-4 max-w-4xl sm:flex-row">
         <Navigation />
-        {children}
+        <main className="flex flex-col mt-4 px-2">{children}</main>
       </body>
     </html>
   );
