@@ -11,7 +11,7 @@ const navItems = {
 
 const Navigation = () => {
   return (
-    <nav className="flex flex-row place-content-start sm:flex-col sm:pr-10 sm:mt-4">
+    <nav className="flex flex-row place-content-start md:flex-col md:pr-20 md:mt-4">
       {Object.entries(navItems).map(([path, { name }]) => {
         return (
           <Link key={path} href={path}>

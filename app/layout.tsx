@@ -12,10 +12,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" className="bg-neutral-950 font-montserrat text-white">
-      <body className="flex flex-col mt-4 mx-4 max-w-4xl sm:flex-row">
+    <html lang="es" className="bg-neutral-950 font-montserrat text-white mx-4">
+      <body className="flex flex-col max-w-4xl mt-4 md:flex-row md:mt-20 lg:mt-32 sm:mx-auto">
         <Navigation />
-        <main className="flex flex-col mt-4 px-2">{children}</main>
+        <main className="flex flex-col flex-auto mt-4 px-2 md:mt-0">
+          {children}
+        </main>
       </body>
     </html>
   );
