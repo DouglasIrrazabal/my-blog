@@ -1,26 +1,34 @@
-import Link from "next/link";
+"use client";
 
-const navItems = {
-  "/": {
-    name: "home",
-  },
-  "/blog": {
-    name: "blog",
-  },
-};
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const navItems = [
+  { path: "/", name: "home" },
+  { path: "/blog", name: "blog" },
+];
 
 const Navigation = () => {
+  const isActiveLink = (path: string) => {
+    let pathName = usePathname() || "/";
+    if (pathName.includes("/blog/")) pathName = "/blog";
+
+    return pathName === path;
+  };
+
   return (
     <nav className="flex flex-row place-content-start md:flex-col md:pr-20 md:mt-4">
-      {Object.entries(navItems).map(([path, { name }]) => {
-        return (
-          <Link key={path} href={path}>
-            <span className="py-[5px] px-[10px] bg-neutral-900 rounded">
-              {name}
-            </span>
-          </Link>
-        );
-      })}
+      {navItems.map(({ path, name }) => (
+        <Link
+          key={name}
+          href={path}
+          className={
+            isActiveLink(path) ? "bg-neutral-900 rounded" : "text-neutral-400"
+          }
+        >
+          <span className="py-[5px] px-[10px]">{name}</span>
+        </Link>
+      ))}
     </nav>
   );
 };
