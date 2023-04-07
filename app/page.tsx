@@ -1,29 +1,37 @@
 const HomePage = () => {
   return (
     <>
-      <hr className="my-7 h-px bg-neutral-600 border-0" />
       <p className="mb-2">¡Hola! Soy Doug.</p>
       <p className="mb-2">
-        Actualmente me desempeño como{" "}
-        <b>desarrollador de software full-stack</b>, a través de este lindo blog
-        busco dar a conocer sobre el estilo de vida de ser <b>developer</b> y
-        como ser cada día un <b>1% mejor</b>.
+        En la actualidad, me desempeño como{" "}
+        <b>desarrollador de software full-stack</b>.
       </p>
-      {/* 
-      <Image
-        priority={true}
-        src="/avatar.jpg"
-        alt="Foto de Doug"
-        width="0"
-        height="0"
-        sizes="100vw"
-        className="rounded w-32 h-auto"
-      />
-      */}
-      <hr className="my-4" />
-      <p className="mb-2">describir mi historia con la tecnologia</p>
-      <p className="mb-2">describir mi historia con el minimalismo</p>
-      <p className="mb-2">mezclar las dos para ser mejor cada día</p>
+      <p className="mb-2">
+        A través de este blog minimalista, comparto mis experiencias y
+        conocimientos sobre cómo{" "}
+        <b>
+          el minimalismo puede mejorar la vida de los desarrolladores de
+          software.
+        </b>{" "}
+        Desde consejos para simplificar el proceso de desarrollo hasta
+        estrategias para manejar el estrés y la ansiedad en el trabajo, aquí
+        encontrarás todo lo que necesitas para ser{" "}
+        <b>más productivo y eficiente.</b>
+      </p>
+      <p className="mb-2">
+        Además, también abordo temas relacionados con el estilo de vida de un
+        desarrollador, como la importancia del{" "}
+        <b>equilibrio entre el trabajo y la vida personal,</b> el desarrollo de
+        habilidades blandas y la importancia de la formación continua.
+      </p>
+      <p className="mb-2">
+        En resumen, mi objetivo es ayudar a los desarrolladores de software a
+        ser más eficientes y a tener una vida más equilibrada y satisfactoria.
+        Creo firmemente que el minimalismo es una herramienta poderosa para
+        lograr este objetivo, y espero que mi experiencia y conocimientos puedan
+        ser de utilidad para aquellos que{" "}
+        <b>buscan mejorar su carrera y su vida personal.</b>
+      </p>
     </>
   );
 };

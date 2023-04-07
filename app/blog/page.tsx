@@ -7,14 +7,13 @@ const BlogPage = () => {
 
   return postMetadata.map(
     ({ title, subtitle, publishedAt, slug }: PostMetadata) => (
-      <>
-        <hr className="my-7 h-px bg-neutral-600 border-0" />
+      <div className="pb-2">
         <Link href={`blog/${slug}`}>
-          <h2>{title}</h2>
+          <h1 className="text-xl font-semibold">{title}</h1>
         </Link>
-        <p>{subtitle}</p>
-        <p>{publishedAt}</p>
-      </>
+        <h2 className="text-lg">{subtitle}</h2>
+        <p className="text-base text-neutral-400">{publishedAt}</p>
+      </div>
     )
   );
 };
