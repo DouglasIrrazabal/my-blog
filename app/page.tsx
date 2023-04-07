@@ -1,11 +1,9 @@
-import Image from "next/image";
-
 const HomePage = () => {
   return (
     <>
-      <h1 className="font-bold text-3xl mb-4">Douglas Irrazabal</h1>
+      <hr className="my-7 h-px bg-neutral-600 border-0" />
       <p className="mb-2">¡Hola! Soy Doug.</p>
-      <p className="mb-2 max-w-lg">
+      <p className="mb-2">
         Actualmente me desempeño como{" "}
         <b>desarrollador de software full-stack</b>, a través de este lindo blog
         busco dar a conocer sobre el estilo de vida de ser <b>developer</b> y
@@ -22,10 +20,10 @@ const HomePage = () => {
         className="rounded w-32 h-auto"
       />
       */}
-      <hr className="my-4 max-w-lg" />
-      <p className="mb-2 max-w-lg">describir mi historia con la tecnologia</p>
-      <p className="mb-2 max-w-lg">describir mi historia con el minimalismo</p>
-      <p className="mb-2 max-w-lg">mezclar las dos para ser mejor cada día</p>
+      <hr className="my-4" />
+      <p className="mb-2">describir mi historia con la tecnologia</p>
+      <p className="mb-2">describir mi historia con el minimalismo</p>
+      <p className="mb-2">mezclar las dos para ser mejor cada día</p>
     </>
   );
 };

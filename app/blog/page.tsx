@@ -8,6 +8,7 @@ const BlogPage = () => {
   return postMetadata.map(
     ({ title, subtitle, publishedAt, slug }: PostMetadata) => (
       <>
+        <hr className="my-7 h-px bg-neutral-600 border-0" />
         <Link href={`blog/${slug}`}>
           <h2>{title}</h2>
         </Link>
