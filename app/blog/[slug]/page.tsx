@@ -3,7 +3,7 @@ import getPostsMetadata from "@/services/getPostsMetadata";
 import getPostContent from "@/services/getPostContent";
 import { PostMetadata } from "@/models/PostMetadata";
 
-export const generateStaticParams = async () => {
+export const generateStaticParams = () => {
   const posts = getPostsMetadata();
 
   return posts.map(({ slug }: PostMetadata) => slug);
