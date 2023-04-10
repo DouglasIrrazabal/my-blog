@@ -1,5 +1,6 @@
 import "./globals.css";
 import Navigation from "@/components/Navigation";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title: "Doug's tech blog",
@@ -20,6 +21,7 @@ export default function RootLayout({
         <Navigation />
         <hr className="my-7 h-px bg-neutral-600 border-0" />
         <main className="flex flex-col">{children}</main>
+        <Analytics />
       </body>
     </html>
   );
