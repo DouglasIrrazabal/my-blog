@@ -18,10 +18,8 @@ const PostPage = (props: any) => {
 
   return (
     <>
-      <h1>{title}</h1>
-      <article className="">
-        <Markdown>{content}</Markdown>
-      </article>
+      <h1 className="font-bold text-xl pb-2">{title}</h1>
+      <Markdown>{content}</Markdown>
     </>
   );
 };

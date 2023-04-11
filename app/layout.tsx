@@ -19,8 +19,8 @@ export default function RootLayout({
     >
       <body className="flex flex-col md:mt-16">
         <Navigation />
-        <hr className="my-7 h-px bg-neutral-600 border-0" />
-        <main className="flex flex-col">{children}</main>
+        <hr className="my-6 h-px bg-neutral-600 border-0" />
+        <main>{children}</main>
         <Analytics />
       </body>
     </html>
