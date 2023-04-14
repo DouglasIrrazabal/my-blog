@@ -1,37 +1,27 @@
-import { ArrowIcon } from "@/components/Icons";
+import Image from "next/image";
+import avatar from "@/public/memoji.png";
 
 const HomePage = () => {
   return (
-    <>
-      <p className="mb-2">
-        ¡Hola! Soy Doug, <b>desarrollador full-stack y minimalista</b>.
-      </p>
-      <p className="mb-2">
-        A través de este blog, abordo temas relacionados con el estilo de vida
-        de un desarrollador, como la importancia del{" "}
-        <b>equilibrio entre el trabajo y la vida personal,</b> el desarrollo de
-        habilidades blandas y la importancia de la formación continua.
-      </p>
-      <p className="mb-2">
-        Mi objetivo es <b>ayudar</b> a los desarrolladores de software a ser más
-        eficientes y a tener una vida más equilibrada y satisfactoria.
-      </p>
-      <p className="mb-2">
-        Creo firmemente que el <b>minimalismo</b> es una herramienta poderosa
-        para lograr este objetivo, y espero que mi experiencia y conocimientos
-        puedan ser de utilidad para aquellos que{" "}
-        <b>buscan mejorar su carrera y su vida personal.</b>
-      </p>
-      <a
-        className="flex items-center text-neutral-400 hover:text-neutral-100 transition-all"
-        rel="noopener noreferrer"
-        target="_blank"
-        href="https://www.linkedin.com/in/douglasirrazabal/"
-      >
-        <ArrowIcon />
-        LinkedIn
-      </a>
-    </>
+    <div className="flex flex-col sm:flex-row items-center md:items-start space-y-4 sm:space-y-0 sm:space-x-10">
+      <div className="space-y-2">
+        <h1 className="text-2xl font-bold">
+          Para devs que buscan la libertad.
+        </h1>
+        <p>
+          ¡Hola! soy Doug, <b>full-stack developer y minimalista</b>. Comparto
+          cómo el minimalismo puede ayudarnos a simplificar nuestro día a día y{" "}
+          <b>mejorar nuestra calidad de vida</b>.
+        </p>
+      </div>
+      <Image
+        src={avatar}
+        alt="Memoji de Doug"
+        width={0}
+        height={0}
+        className="rounded-full w-40 sm:w-64"
+      />
+    </div>
   );
 };
 

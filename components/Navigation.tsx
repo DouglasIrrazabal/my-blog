@@ -2,44 +2,29 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import avatar from "@/public/circle-avatar.svg";
+import avatar from "@/public/memoji-dev.png";
 import { usePathname } from "next/navigation";
 
 const navItems = [
   { title: "Douglas Irrazabal", name: "Home", path: "/" },
+  { title: "About", name: "About", path: "/about" },
   { title: "Blog", name: "Blog", path: "/blog" },
 ];
 
 const Navigation = () => {
-  const getPath = () => {
-    let pathName = usePathname() || "/";
-    if (pathName.includes("/blog/")) {
-      pathName = "/blog";
-    }
-
-    return pathName;
-  };
-
-  const isActive = (path: string) => getPath() === path;
-
-  const getTitle = () => {
-    const pathName = getPath();
-    const navObject = navItems.find(({ path }) => path === pathName);
-
-    return navObject?.title;
-  };
+  const isActive = (path: string) => usePathname() === path;
 
   return (
-    <div className="flex flex-col space-y-4 content-between">
+    <header className="flex flex-col space-y-4 content-between">
       <Image
         src={avatar}
         alt="Memoji de Doug"
+        priority={true}
         width={0}
         height={0}
-        sizes="100vw"
-        className="w-12 h-auto"
+        className="w-12 h-auto rounded-full"
       />
-      <h1 className="text-3xl font-bold">{getTitle()}</h1>
+      <h1 className="text-3xl font-bold">Douglas Irrazabal</h1>
       <nav className="flex flex-row">
         {navItems.map(({ name, path }) => (
           <Link
@@ -53,7 +38,7 @@ const Navigation = () => {
           </Link>
         ))}
       </nav>
-    </div>
+    </header>
   );
 };
 
