@@ -17,10 +17,10 @@ const PostPage = (props: any) => {
   } = getPostContent(slug);
 
   return (
-    <>
-      <h1 className="font-bold text-xl pb-2">{title}</h1>
-      <Markdown>{content}</Markdown>
-    </>
+    <article>
+      <h1 className="mb-2">{title}</h1>
+      <Markdown className="space-y-2">{content}</Markdown>
+    </article>
   );
 };
 
