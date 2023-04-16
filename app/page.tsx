@@ -5,9 +5,7 @@ const HomePage = () => {
   return (
     <div className="flex flex-col sm:flex-row items-center md:items-start space-y-4 sm:space-y-0 sm:space-x-10">
       <div className="space-y-2">
-        <h1 className="text-2xl font-bold">
-          Para devs que buscan la libertad.
-        </h1>
+        <h1>Para devs que buscan la libertad.</h1>
         <p>
           ¡Hola! soy Doug, <b>full-stack developer y minimalista</b>. Comparto
           cómo el minimalismo puede ayudarnos a simplificar nuestro día a día y{" "}

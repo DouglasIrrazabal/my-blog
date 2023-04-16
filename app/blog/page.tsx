@@ -9,9 +9,9 @@ const ListBlogPosts = () => {
     ({ title, subtitle, publishedAt, slug }: PostMetadata) => (
       <div className="pb-2">
         <Link href={`blog/${slug}`}>
-          <h1 className="text-xl font-semibold">{title}</h1>
+          <h2>{title}</h2>
         </Link>
-        <h2 className="text-base">{subtitle}</h2>
+        <p>{subtitle}</p>
         <p className="text-sm text-neutral-400">{publishedAt}</p>
       </div>
     )
