@@ -19,3 +19,22 @@
     @apply list-disc list-inside;
   }
 }
+
+@layer components {
+  .blog-content > h2,
+  h3 {
+    @apply pb-2;
+  }
+
+  .blog-content > p {
+    @apply pb-4;
+  }
+
+  .blog-content > ul > li:last-child {
+    @apply pb-4;
+  }
+
+  .blog-content > ol > li {
+    @apply pb-2;
+  }
+}
