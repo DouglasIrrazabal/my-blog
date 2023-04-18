@@ -18,7 +18,7 @@ const getPostsMetadata = (): PostMetadata[] => {
     return {
       title,
       subtitle,
-      publishedAt,
+      publishedAt: new Date(publishedAt),
       slug: fileName.replace(".md", ""),
     };
   });

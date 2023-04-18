@@ -1,7 +1,7 @@
 ---
 title: "Manifiesto"
 subtitle: "Y2K"
-publishedAt: "Sábado 1 de Enero, 2000."
+publishedAt: "2000-01-01T00:00:00"
 ---
 
 **Creo en la libertad individual como un valor fundamental** para el desarrollo de cada persona. Cada uno debe tener la libertad de explorar sus intereses y habilidades para descubrir su verdadero potencial.
