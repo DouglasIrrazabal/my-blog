@@ -37,4 +37,8 @@
   .blog-content > ol > li {
     @apply pb-2;
   }
+
+  .blog-content > p > img {
+    @apply sm:w-96;
+  }
 }
