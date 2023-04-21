@@ -2,6 +2,7 @@ import Markdown from "markdown-to-jsx";
 import getPostsMetadata from "@/services/getPostsMetadata";
 import getPostContent from "@/services/getPostContent";
 import { PostMetadata } from "@/models/PostMetadata";
+//import { Metadata } from "next";
 
 export const generateStaticParams = () => {
   const posts = getPostsMetadata();
@@ -9,12 +10,18 @@ export const generateStaticParams = () => {
   return posts.map(({ slug }: PostMetadata) => slug);
 };
 
+/*export const generateMetadata = (title: string, subtitle: string): Metadata => {
+  return { title: title, description: subtitle };
+};*/
+
 const PostPage = (props: any) => {
   const { slug } = props.params;
   const {
     data: { title },
     content,
   } = getPostContent(slug);
+
+  //generateMetadata(title, subtitle);
 
   return (
     <article>
