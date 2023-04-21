@@ -41,4 +41,8 @@
   .blog-content > p > img {
     @apply sm:w-96;
   }
+
+  .blog-content > p > a {
+    @apply underline;
+  }
 }
