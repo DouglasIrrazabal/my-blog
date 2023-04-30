@@ -1,32 +1,20 @@
 import Markdown from "markdown-to-jsx";
-import getPostsMetadata from "@/services/getPostsMetadata";
-import getPostContent from "@/services/getPostContent";
-import { PostMetadata } from "@/models/PostMetadata";
-//import { Metadata } from "next";
+import { getSinglePostBySlug } from "@/services/getSinglePostBySlug";
 
-export const generateStaticParams = () => {
-  const posts = getPostsMetadata();
+export const dynamicParams = true;
 
-  return posts.map(({ slug }: PostMetadata) => slug);
-};
-
-/*export const generateMetadata = (title: string, subtitle: string): Metadata => {
-  return { title: title, description: subtitle };
-};*/
-
-const PostPage = (props: any) => {
+const PostPage = async (props: any) => {
   const { slug } = props.params;
-  const {
-    data: { title },
-    content,
-  } = getPostContent(slug);
 
-  //generateMetadata(title, subtitle);
+  const {
+    metadata: { title },
+    markdown,
+  } = await getSinglePostBySlug(slug);
 
   return (
     <article>
       <h1 className="pb-2">{title}</h1>
-      <Markdown className="blog-content">{content}</Markdown>
+      <Markdown className="blog-content">{markdown}</Markdown>
     </article>
   );
 };
